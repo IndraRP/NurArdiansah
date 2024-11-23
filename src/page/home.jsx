@@ -4,29 +4,26 @@ import cvFile from "./image/cvardi.pdf";
 import ardi from "./image/ardi.png";
 
 import Sertif1 from "./image/sertif1.png";
-import Sertif2 from "./image/sertif2.png";
 import Sertif3 from "./image/sertif3.png";
 import Sertif4 from "./image/sertif4.png";
+
+import Foto1 from "./image/porto1.jpg";
+import Foto2 from "./image/porto2.jpg";
+import Foto3 from "./image/porto3.jpg";
+import Foto4 from "./image/porto4.jpg";
 
 import { teamMembers } from "./data";
 
 const home = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [Sertif1, Sertif2, Sertif3, Sertif4];
+  const images = [Sertif1, Sertif3, Sertif4];
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
   const handleNext = () => {
     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
-
-  const Foto1 = "https://ramaijayaabadi.co.id/wp-content/uploads/2021/01/Project-Pangkalan-Susu-12.jpg";
-  const Foto2 = "https://jurnalpost.com/wp-content/uploads/2021/03/PPSDM-Migas.jpeg";
-  const Foto3 = "https://pt-htsi.com/wp-content/uploads/2022/11/PGAS_Skid_Package_Gbr_1.jpg";
-  const Foto4 = "https://2.bp.blogspot.com/-KEct0Gttfao/W1-L6HA8BxI/AAAAAAAAD9M/juNCYfUBZkQNTRy8KL7Sf9M4OrEbg3KigCK4BGAYYCw/s1600/K3%2Bdi%2BIndustri%2BMigas.png";
-
-
 
   return (
     <div>
@@ -134,8 +131,8 @@ const home = () => {
         </p>
         <div className="grid gap-6 mt-8 sm:grid-cols-2">
 
-          <div className="flex items-center text-gray-800">
-            <span className="mx-3 w-full">NIP:19861007 200604 1 001 </span>
+          <div className="flex items-center text-gray-100">
+            <span className="mx-3 w-full line-through">NIP:19861007 200604 1 001 </span>
           </div>
 
           <div className="flex items-center text-gray-800 -px-3">
@@ -252,7 +249,6 @@ const home = () => {
       
       
 
-{/* PORTOFOLIO */}
 <section id="portofolio-section" className="bg-white">
   <div className="container px-6 py-10 mx-auto">
     <h1 className="text-2xl font-bold text-center text-gray-950 capitalize lg:text-3xl">
@@ -260,7 +256,7 @@ const home = () => {
     </h1>
 
     <p className="mt-4 text-center text-gray-500">
-    Several achievements, Special Assignments and Structural Positions in the field of Lectures and Academics specializing in Petroleum and Natural Gas 
+      Several achievements and Special Assignments in the field of Lectures and Academics specializing in Petroleum and Natural Gas 
     </p>
 
     <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-2">
@@ -272,7 +268,8 @@ const home = () => {
       >
         <div className="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
           <h2 className="mt-4 text-xl font-semibold text-white capitalize">
-          Pengelola Perkuliahan dan Akademik</h2>
+            Pengelola Perkuliahan dan Akademik
+          </h2>
           <p className="mb-3 text-white capitalize">Periode Jabatan : 2019 – 2024 (Januari)</p>
           <a
             href="https://akamigas.ac.id/"
@@ -291,14 +288,14 @@ const home = () => {
       >
         <div className="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
           <h2 className="mt-4 text-xl font-semibold text-white capitalize">
-          Analis Laboratorium Pendidikan
+            Analis Laboratorium Pendidikan
           </h2>
           <p className="mb-3 text-white capitalize">Periode Jabatan : 2024 - sekarang</p>
           <a
             href="https://akamigas.ac.id/"
             className="text-blue-400 hover:underline"
           >
-            Politeknik Energi dan Mineral (PEM Akamigas) 
+            Politeknik Energi dan Mineral (PEM Akamigas)
           </a>
         </div>
       </div>
@@ -311,14 +308,14 @@ const home = () => {
       >
         <div className="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
           <h2 className="mt-4 text-xl font-semibold text-white capitalize">
-          Petugas Pengambilan Contoh Minyak Bumi dan Gas Bumi di PT Pertamina EP Cepu 
+            Petugas Pengambilan Contoh Minyak Bumi dan Gas Bumi di PT Pertamina EP Cepu
           </h2>
           <p className="mb-3 text-white capitalize">Periode Jabatan : 2024-09-01 - 2024-12-31</p>
           <a
             href="https://akamigas.ac.id/"
             className="text-blue-400 hover:underline"
           >
-            Politeknik Energi dan Mineral (PEM Akamigas) 
+            Politeknik Energi dan Mineral (PEM Akamigas)
           </a>
         </div>
       </div>
@@ -342,10 +339,10 @@ const home = () => {
             </a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-
 
     </div>
   )
