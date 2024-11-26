@@ -16,17 +16,18 @@ export default defineConfig({
         theme_color: '#000000',
         icons: [
           {
-            src: '/icon-192x192.png', // Ganti ke PNG
+            src: '/icon.jpg',
             sizes: '192x192',
-            type: 'image/png',
+            type: 'image/jpg',
           },
           {
-            src: '/icon-512x512.png', // Ganti ke PNG
+            src: '/icon.jpg',
             sizes: '512x512',
-            type: 'image/png',
+            type: 'image/jpg',
           },
         ],
       },
     }),
   ],
+  base: "/NurArdiansah"
 });
