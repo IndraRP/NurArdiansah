@@ -10,7 +10,7 @@ export default defineConfig({
       manifest: {
         name: 'Nur Ardiansah',
         short_name: 'Nur Ardiansah',
-        start_url: '/',
+        start_url: '/NurArdiansah',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#000000',
@@ -29,5 +29,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/"
+  base: "/NurArdiansah"
 });
