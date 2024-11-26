@@ -28,7 +28,7 @@ const home = () => {
   return (
     <div>
          {/* MENU UTAMA */}
-      <section id="home-section" className="bg-white">
+      <section id="home-section" className="bg-white mt-20 lg:mt-1 xl:mt1">
         <div className="max-w-6xl px-6 pb-5 mx-auto">
           <main className="relative z-20 w-full mt-8 md:flex md:items-center xl:mt-12">
             <div className="absolute w-full bg-gray-800 -z-10 md:h-96 rounded-2xl"></div>
