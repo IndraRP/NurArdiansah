@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TypeAnimation } from "react-type-animation";
-import cvFile from "./image/cvardi.pdf";
+import cvFile from "./image/cvardi1.pdf";
 import ardi from "./image/ardi.png";
 
 import Sertif1 from "./image/sertif1.png";
