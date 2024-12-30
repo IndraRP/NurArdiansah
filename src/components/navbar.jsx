@@ -1,21 +1,27 @@
-import React from 'react';
-import { FaHome, FaUser, FaGraduationCap, FaCertificate, FaFolderOpen } from 'react-icons/fa';
+import React from "react";
+import {
+  FaHome,
+  FaUser,
+  FaGraduationCap,
+  FaCertificate,
+  FaFolderOpen,
+} from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <>
       {/* Navbar Atas (Mobile View) */}
-      <div className="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-50">
-        <div className="flex items-center justify-center py-3">
-          <h1 className="text-lg font-semibold text-gray-800">
+      <div className="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-50 rounded-b-2xl">
+        <div className="flex items-center justify-center py-4">
+          <h1 className="text-lg font-semibold text-gray-800 ">
             Nur Ardiansah Profile
           </h1>
         </div>
       </div>
 
       {/* Navbar Bawah (Mobile View) */}
-      <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white shadow-md z-50">
-        <div className="flex items-center justify-around py-2">
+      <div className="lg:hidden fixed bottom-0 left-0 w-full bg-white shadow-inner z-50 rounded-t-2xl border-red-900">
+        <div className="flex items-center justify-around py-4 px-2">
           <a
             href="#home-section"
             className="flex flex-col items-center text-gray-700 hover:text-blue-600"
