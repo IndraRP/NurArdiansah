@@ -4,8 +4,11 @@ import cvFile from "./image/cvardi1.pdf";
 import ardi from "./image/ardi.png";
 
 import Sertif1 from "./image/sertif1.png";
+import Sertif2 from "./image/sertif2.png";
 import Sertif3 from "./image/sertif3.png";
 import Sertif4 from "./image/sertif4.png";
+import Sertif5 from "./image/sertif5-1.png";
+import Sertif6 from "./image/sertif5-2.png";
 
 import Foto1 from "./image/porto1.jpg";
 import Foto2 from "./image/porto2.jpg";
@@ -17,7 +20,7 @@ import { teamMembers } from "./data";
 const home = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [Sertif1, Sertif3, Sertif4];
+  const images = [Sertif1,Sertif2, Sertif4, Sertif3,  Sertif5, Sertif6];
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
