@@ -203,7 +203,7 @@ const home = () => {
 
       <section
         id="about-section"
-        className="bg-gradient-to-r from-gray-950 via-gray-900 to-gray-800 px-5 py-10 md:p-10 lg:p-16 text-white"
+        className="bg-gradient-to-r from-gray-950 via-gray-900 to-gray-800 px-5 py-10 md:p-10 lg:p-16 lg:mt-10 mt-0 text-white"
       >
         <div className="text-center pb-5 mb-5">
           <h1 className="text-2xl md:text-3xl font-semibold tracking-wide">
