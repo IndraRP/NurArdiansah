@@ -27,7 +27,7 @@ const Navbar = () => {
       {/* Navbar Bawah (Mobile View) */}
       <div className="lg:hidden fixed bottom-0 left-0 w-full  shadow-lg bg-gradient-to-r from-gray-500 via-gray-300 to-gray-500 z-50 rounded-t-xl">
         <div className="flex items-center justify-around py-2">
-          <NavItem icon="bi-houses" label="Home" href="/" />
+          <NavItem icon="bi-houses" label="Home" href="#" />
           <NavItem icon="bi-person" label="About" href="#about-section" />
           <NavItem
             icon="bi-mortarboard"
