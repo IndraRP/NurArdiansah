@@ -58,7 +58,7 @@ const footer = () => {
 
           <div className="flex flex-col items-center sm:flex-row sm:justify-between">
             <a
-              href="https://indrarp.github.io/indraweb/"
+              href="https://indrarp.github.io/webprofile/"
               className="text-sm text-gray-100"
             >
               © Copyright 2024. Created by Indra Ridho Rizkian Pratama.
