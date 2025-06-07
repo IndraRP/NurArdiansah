@@ -19,6 +19,8 @@ import Foto2 from "./image/porto2.jpg";
 import Foto3 from "./image/porto3.jpg";
 import Foto4 from "./image/porto4.jpg";
 
+import videoProfile from "./image/video_profile.mp4";
+
 import { teamMembers } from "./data";
 
 const home = () => {
@@ -271,10 +273,13 @@ const home = () => {
 
           {/* Bagian Gambar */}
           <div className="flex justify-center items-center w-full">
-            <img
+            <video
               className="object-cover w-full max-w-sm md:max-w-md lg:max-w-xl h-auto lg:h-[412px] rounded-md"
-              src="https://cdn.antaranews.com/cache/800x533/2022/01/18/WhatsApp-Image-2022-01-18-at-16.17.48.jpg"
-              alt="glasses photo"
+              src={videoProfile}
+              autoPlay
+              loop
+              muted
+              playsInline
             />
           </div>
         </div>
