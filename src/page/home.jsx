@@ -7,12 +7,15 @@ import ardi from "./image/ardi.png";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import Sertif1 from "./image/sertif1.png";
-import Sertif2 from "./image/sertif2.png";
-import Sertif3 from "./image/sertif3.png";
-import Sertif4 from "./image/sertif4.png";
-import Sertif5 from "./image/sertif5-1.png";
-import Sertif6 from "./image/sertif5-2.png";
+import Sertif1 from "./image/sertif1.pdf";
+import Sertif2 from "./image/sertif2.pdf";
+import Sertif3 from "./image/sertif3.pdf";
+import Sertif4 from "./image/sertif4.pdf";
+import Sertif5 from "./image/sertif6.pdf";
+import Sertif6 from "./image/sertif6.pdf";
+import Sertif7 from "./image/sertif7.pdf";
+import Sertif8 from "./image/sertif8.pdf";
+import Sertif9 from "./image/sertif9.pdf";
 
 import Foto1 from "./image/porto1.jpg";
 import Foto2 from "./image/porto2.jpg";
@@ -20,12 +23,28 @@ import Foto3 from "./image/porto3.jpg";
 import Foto4 from "./image/porto4.jpg";
 
 import videoProfile from "./image/video_profile.mp4";
+import { useMediaQuery } from "react-responsive";
 
 import { teamMembers } from "./data";
 
+import { Document, Page, pdfjs } from "react-pdf";
+import pdfWorker from "pdfjs-dist/build/pdf.worker.min?url";
+
+pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
+
 const home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [Sertif1, Sertif2, Sertif4, Sertif3, Sertif5, Sertif6];
+  const images = [
+    Sertif1,
+    Sertif2,
+    Sertif4,
+    Sertif3,
+    Sertif5,
+    Sertif6,
+    Sertif7,
+    Sertif8,
+    Sertif9,
+  ];
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
@@ -46,11 +65,23 @@ const home = () => {
     [emblaApi]
   );
 
+  const [width, setWidth] = useState(300);
+
+  useEffect(() => {
+    const resize = () => {
+      setWidth(window.innerWidth >= 768 ? 500 : 300);
+    };
+
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
   return (
     <div>
       {/* MENU UTAMA */}
       <section id="home-section" className="bg-white mt-16 lg:mt-1 xl:mt1">
-        <div className="max-w-6xl px-6 pb-5 mx-auto">
+        <div className="max-w-7xl px-6 pb-5 mx-auto">
           <main className="relative z-20 w-full mt-8 md:flex md:items-center xl:mt-12">
             <div className="absolute w-full bg-gray-800 -z-10 md:h-96 rounded-2xl"></div>
 
@@ -83,12 +114,18 @@ const home = () => {
                 </div>
 
                 <p className="mt-4 text-sm leading-relaxed text-white md:text-md">
-                  An educational professional specializing in Lecture Management
-                  and Laboratory Analysis, skilled in organizing academic
-                  programs, optimizing educational methods, and enhancing
-                  student engagement. Known for strong analytical and leadership
-                  abilities in managing academic resources and improving
-                  learning outcomes
+                  Profesional sistem industri dan manajemen logistik/ rantai
+                  pasok dengan penempatan di Laboratorium Logistik Migas.
+                  Menguasai aktivitas SCM oil & gas. Mampu memetakan SCM BBM
+                  end-to-end, serta SCM natural gas. Mengaplikasikan statistika
+                  industri untuk analisis demand, lead time, reliabilitas
+                  suplai, dan KPI layanan; serta riset operasi dan pemodelan
+                  sistem untuk optimasi alokasi suplai, kapasitas, rute, dan
+                  penjadwalan distribusi. Mengelola logistik material migas
+                  (suku cadang/ MRO) melalui perencanaan kebutuhan, pengadaan,
+                  pergudangan, pengendalian persediaan, dan distribusi ke titik
+                  operasi. Memperkuat ketahanan rantai pasok melalui enterprise
+                  risk management dan kajian risiko BBM petrodiesel–biodiesel.
                 </p>
 
                 <div className="button block lg:flex pt-4">
@@ -144,64 +181,6 @@ const home = () => {
           </main>
         </div>
       </section>
-      {/* 
-      <section id="about-section">
-        <div className="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
-          <div className="w-full lg:w-1/2">
-            <div className="lg:max-w-lg">
-              <h1 className="text-3xl font-semibold tracking-wide text-gray-800">
-                This is a bit of my{" "}
-                <span className="text-slate-800 font-extrabold">Identity</span>
-              </h1>
-              <p className="mt-4 text-gray-600">
-                I am currently working at the Polytechnic of Energy and Minerals
-                (PEM Akamigas) as an Educator Laboratory Analyst starting 27
-                February 2024.
-              </p>
-              <div className="grid gap-6 mt-8 sm:grid-cols-2">
-                <div className="flex items-center text-gray-100">
-                  <span className="mx-3 w-full line-through">
-                    NIP:19861007 200604 1 001{" "}
-                  </span>
-                </div>
-
-                <div className="flex items-center text-gray-800 -px-3">
-                  <span className="mx-3">Bojonegoro / 7 Oktober 1986</span>
-                </div>
-
-                <div className="flex items-center text-gray-800 -px-3">
-                  <span className="mx-3">
-                    Jabatan : Analis Laboratorium Pendidikan/27 Feb 2024
-                  </span>
-                </div>
-
-                <div className="flex items-center text-gray-800 -px-3">
-                  <span className="mx-3">Penata Muda Tingkat I / IIIb</span>
-                </div>
-
-                <div className="flex items-center text-gray-800 -px-3">
-                  <span className="mx-3">
-                    Instansi : Politeknik Energi dan Mineral (PEM Akamigas){" "}
-                  </span>
-                </div>
-
-                <div className="flex items-center text-gray-800 -px-3">
-                  <span className="mx-3">
-                    Laboratorium Logistik Minyak dan Gas
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center w-full h-96 lg:w-1/2">
-            <img
-              className="object-cover w-full h-full max-w-2xl rounded-md"
-              src="https://cdn.antaranews.com/cache/800x533/2022/01/18/WhatsApp-Image-2022-01-18-at-16.17.48.jpg"
-              alt="glasses photo"
-            />
-          </div>
-        </div>
-      </section> */}
 
       <section
         id="about-section"
@@ -341,16 +320,19 @@ const home = () => {
           <div className="w-full max-w-2xl h-auto rounded-lg overflow-hidden relative">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
-                {images.map((src, index) => (
+                {images.map((pdf, index) => (
                   <div
                     key={index}
-                    className="flex-[0_0_100%] flex items-center justify-center bg-transparent"
+                    className="flex-[0_0_100%] flex justify-center items-center"
                   >
-                    <img
-                      src={src}
-                      className="max-h-[500px] w-auto rounded-lg"
-                      alt={`Slide ${index + 1}`}
-                    />
+                    <Document file={pdf}>
+                      <Page
+                        pageNumber={1}
+                        width={width}
+                        renderTextLayer={false}
+                        renderAnnotationLayer={false}
+                      />
+                    </Document>
                   </div>
                 ))}
               </div>
