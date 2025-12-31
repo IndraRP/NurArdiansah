@@ -99,17 +99,7 @@ const home = () => {
                   </p>
 
                   <p className="text-blue-200 text-xl font-semibold">
-                    <TypeAnimation
-                      sequence={[
-                        "Lecture Manager and Academic",
-                        500,
-                        "Educational Laboratory Analyst",
-                        500,
-                      ]}
-                      wrapper="span"
-                      speed={50}
-                      repeat={Infinity}
-                    />{" "}
+                    Educational Laboratory Analyst
                   </p>
                 </div>
 
@@ -207,7 +197,6 @@ const home = () => {
               {
                 label: "NIP",
                 value: "19861007 200604 1 001",
-                strike: true,
               },
               {
                 label: "Tempat/Tanggal Lahir",
