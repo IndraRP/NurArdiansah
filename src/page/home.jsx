@@ -8,10 +8,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 import Sertif1 from "./image/sertif1.pdf";
-import Sertif2 from "./image/sertif2.pdf";
 import Sertif3 from "./image/sertif3.pdf";
 import Sertif4 from "./image/sertif4.pdf";
-import Sertif5 from "./image/sertif6.pdf";
+import Sertif5 from "./image/sertif5.pdf";
 import Sertif6 from "./image/sertif6.pdf";
 import Sertif7 from "./image/sertif7.pdf";
 import Sertif8 from "./image/sertif8.pdf";
@@ -36,9 +35,8 @@ const home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [
     Sertif1,
-    Sertif2,
-    Sertif4,
     Sertif3,
+    Sertif4,
     Sertif5,
     Sertif6,
     Sertif7,
